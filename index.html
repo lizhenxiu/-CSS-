@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<style type="text/css">
+	ul {
+    display: flex;
+    position: absolute;
+    width: 800px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+li {
+    position: relative;
+    padding: 20px;
+    font-size: 24px;
+    color: #000;
+    line-height: 1;
+    transition: 0.1s all linear;
+    cursor: pointer;
+}
+
+li::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 0;
+    height: 100%;
+    border-bottom: 2px solid #000;
+    transition: 0.1s all linear;
+}
+
+li:hover::before {
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition-delay: 0.1s;
+    border-bottom-color: #000;
+}
+
+li:hover ~ li::before {
+    left: 0;
+}
+
+li:active {
+    background: #000;
+    color: #fff;
+}
+ol, ul {
+    list-style: none;
+}
+
+</style>
+<body>
+<ul>
+	<li>首页</li>
+	<li>新闻</li>
+	<li>公告</li>
+	<li>招聘</li>
+	<li>公告</li>
+	<li>消息</li>
+</ul>
+
+</body>
+</body>
+</html>
